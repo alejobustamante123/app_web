@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Digital Wallet</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Digital Wallet</h1>
+        <div id="balance">
+            <h2>Current Balance: <span id="currentBalance">$0.00</span></h2>
+        </div>
+        <form id="transactionForm">
+            <label for="amount">Amount:</label>
+            <input type="number" id="amount" step="0.01" required>
+            <div>
+                <input type="radio" id="deposit" name="transactionType" value="deposit" checked>
+                <label for="deposit">Deposit</label>
+                <input type="radio" id="withdraw" name="transactionType" value="withdraw">
+                <label for="withdraw">Withdraw</label>
+            </div>
+            <button type="submit">Submit</button>
+        </form>
+        <h2>Transactions:</h2>
+        <ul id="transactionList"></ul>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
